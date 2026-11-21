@@ -1,0 +1,81 @@
+prompt_id,model,prompting_style,response,correct,failure_mode
+CP1,Model A,zero-shot,"99% - the test is 99% accurate",0,base-rate neglect
+CP2,Model A,zero-shot,"1/221, about 0.45%",1,none
+CP3,Model A,zero-shot,"Switch - 2/3 chance of winning",1,none
+CP4,Model A,zero-shot,"90%",1,none
+CP5,Model A,zero-shot,"P(A|B) = 0.4; A and B are independent",1,none
+CP6,Model A,zero-shot,"90% - 90% of spam contains 'free'",0,base-rate neglect
+CP7,Model A,zero-shot,"2/11, about 18%",1,none
+CP8,Model A,zero-shot,"3/7, about 43%",1,none
+CP9,Model A,zero-shot,"60% - Machine A makes 60% of the items",0,base-rate neglect
+CP10,Model A,zero-shot,"58%",1,none
+HT1,Model A,zero-shot,"There is a 97% chance the alternative hypothesis is true",0,p-value misinterpretation
+HT2,Model A,zero-shot,"p is about 0.05, so fail to reject at 0.01",0,arithmetic slip
+HT3,Model A,zero-shot,"Beta = 0.20",1,none
+HT4,Model A,zero-shot,"z = 2.0, p = 0.046; reject at 0.05 only",1,none
+HT5,Model A,zero-shot,"Power rises; Type I error stays at alpha",1,none
+HT6,Model A,zero-shot,"(a) - 95% probability the mean is in (48, 56)",0,p-value misinterpretation
+HT7,Model A,zero-shot,"Fail to reject; this does not prove H0 true",1,none
+HT8,Model A,zero-shot,"p is about 0.038; reject at 0.05",1,none
+HT9,Model A,zero-shot,"Expect 1 false positive; P(at least one) is about 64%",1,none
+HT10,Model A,zero-shot,"z is about 2.0, p is about 0.04 - significant",0,arithmetic slip
+RI1,Model A,zero-shot,"Slope 0.5: +1 unit of x raises expected y by 0.5; intercept 2 is expected y at x=0",1,none
+RI2,Model A,zero-shot,"64% of variance explained; |r| = 0.8",1,none
+RI3,Model A,zero-shot,"About 8% higher wages per extra year of education",1,none
+RI4,Model A,zero-shot,"Biased upward - ability is omitted and positively related to both",1,none
+RI5,Model A,zero-shot,"Residuals look fine; assumptions hold",0,assumption violation
+RI6,Model A,zero-shot,"VIF 12 is acceptable; no action needed",0,assumption violation
+RI7,Model A,zero-shot,"R-squared never falls; adjusted R-squared can fall",1,none
+RI8,Model A,zero-shot,"Slope 0 means x has no effect on y",0,regression misread
+RI9,Model A,zero-shot,"Women earn 3.5 units more than men, holding other variables constant",1,none
+RI10,Model A,zero-shot,"R-squared is high, so the prediction at x=50 is reliable",0,regression misread
+BI1,Model A,zero-shot,"Posterior odds are 4:1, so P = 80%",0,prior misuse
+BI2,Model A,zero-shot,"Beta(9,5); mean 9/14, about 64%",1,none
+BI3,Model A,zero-shot,"P(theta in the interval | data) = 0.95, unlike a confidence interval",1,none
+BI4,Model A,zero-shot,"Data are 8x more likely under H1 - moderate evidence",1,none
+BI5,Model A,zero-shot,"Posterior odds 3:1, so P(H1|data) = 75%",1,none
+BI6,Model A,zero-shot,"Beta(4,1); mean 0.8",1,none
+BI7,Model A,zero-shot,"7/10 = 70% - the sample proportion",0,prior misuse
+BI8,Model A,zero-shot,"Very little movement with n=5; data dominate as n grows",1,none
+BI9,Model A,zero-shot,"Average the two estimates equally: (theta-hat-1 + theta-hat-2)/2",0,prior misuse
+BI10,Model A,zero-shot,"No - only the credible interval is a probability statement about theta",1,none
+CP1,Model B,chain-of-thought,"Prior 1%, true positives 0.0099, false positives 0.0495, so P = 0.0099/0.0594 = 16.7%",1,none
+CP2,Model B,chain-of-thought,"1/221, about 0.45%",1,none
+CP3,Model B,chain-of-thought,"Switch - 2/3 chance of winning",1,none
+CP4,Model B,chain-of-thought,"90%",1,none
+CP5,Model B,chain-of-thought,"P(A|B) = 0.4; independent since P(A and B) = P(A)P(B)",1,none
+CP6,Model B,chain-of-thought,"90% - 90% of spam contains 'free'",0,base-rate neglect
+CP7,Model B,chain-of-thought,"2/11, about 18%",1,none
+CP8,Model B,chain-of-thought,"3/7, about 43%",1,none
+CP9,Model B,chain-of-thought,"60% - Machine A makes most items",0,base-rate neglect
+CP10,Model B,chain-of-thought,"58%",1,none
+HT1,Model B,chain-of-thought,"Reject H0; p is P(data this extreme | H0), not P(H0 true)",1,none
+HT2,Model B,chain-of-thought,"p is about 0.05, so fail to reject at 0.01",0,arithmetic slip
+HT3,Model B,chain-of-thought,"Beta = 0.20",1,none
+HT4,Model B,chain-of-thought,"z = 2.0, p = 0.046; reject at 0.05 only",1,none
+HT5,Model B,chain-of-thought,"Power rises; Type I error stays at alpha",1,none
+HT6,Model B,chain-of-thought,"(b) - 95% describes the procedure, not this interval",1,none
+HT7,Model B,chain-of-thought,"Fail to reject; this does not prove H0 true",1,none
+HT8,Model B,chain-of-thought,"p is about 0.038; reject at 0.05",1,none
+HT9,Model B,chain-of-thought,"Expect 1 false positive; P(at least one) is about 64%",1,none
+HT10,Model B,chain-of-thought,"z is about 1.9, p is about 0.05 - just significant",0,arithmetic slip
+RI1,Model B,chain-of-thought,"Slope 0.5: +1 unit of x raises expected y by 0.5; intercept 2 is expected y at x=0",1,none
+RI2,Model B,chain-of-thought,"64% of variance explained; |r| = 0.8",1,none
+RI3,Model B,chain-of-thought,"About 8% higher wages per extra year of education",1,none
+RI4,Model B,chain-of-thought,"Biased upward - ability is omitted and positively related to both",1,none
+RI5,Model B,chain-of-thought,"Variance looks constant; proceed as normal",0,assumption violation
+RI6,Model B,chain-of-thought,"VIF 12 means severe multicollinearity; standard errors are inflated",1,none
+RI7,Model B,chain-of-thought,"R-squared never falls; adjusted R-squared can fall",1,none
+RI8,Model B,chain-of-thought,"No linear effect, so x is irrelevant",0,regression misread
+RI9,Model B,chain-of-thought,"Women earn 3.5 units more than men, holding other variables constant",1,none
+RI10,Model B,chain-of-thought,"Extrapolation is unreliable outside the observed range",1,none
+BI1,Model B,chain-of-thought,"Posterior odds = (3/7) x 4 = 1.71, so P = 63%",1,none
+BI2,Model B,chain-of-thought,"Beta(9,5); mean 9/14, about 64%",1,none
+BI3,Model B,chain-of-thought,"P(theta in the interval | data) = 0.95, unlike a confidence interval",1,none
+BI4,Model B,chain-of-thought,"Data are 8x more likely under H1 - moderate evidence",1,none
+BI5,Model B,chain-of-thought,"Posterior odds 3:1, so P(H1|data) = 75%",1,none
+BI6,Model B,chain-of-thought,"Beta(4,1); mean 0.8",1,none
+BI7,Model B,chain-of-thought,"70% from the observed data",0,prior misuse
+BI8,Model B,chain-of-thought,"Very little movement with n=5; data dominate as n grows",1,none
+BI9,Model B,chain-of-thought,"0.7 x theta-hat-1 + 0.3 x theta-hat-2",1,none
+BI10,Model B,chain-of-thought,"No - only the credible interval is a probability statement about theta",1,none
